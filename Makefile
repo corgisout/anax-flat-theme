@@ -39,7 +39,7 @@ VENDORBIN 	= vendor/bin
 NPMBIN		= node_modules/.bin
 
 # LESS and CSS
-LESS 		 	= style.less #style1.less #style2.less
+LESS 		 	= style.less modules.less vgrid.less#style1.less #style2.less
 LESS_MODULES	= modules/
 LESS_OPTIONS 	= --strict-imports --include-path=$(LESS_MODULES)
 CSSLINT_OPTIONS = --quiet
@@ -121,7 +121,7 @@ test: less-lint
 .PHONY: less less-install less-lint
 less: prepare-build
 	@$(call HELPTEXT,$@)
-	
+
 	$(foreach file, $(LESS), $(LESSC) $(LESS_OPTIONS) $(file) build/css/$(basename $(file)).css; )
 	$(foreach file, $(LESS), $(LESSC) --clean-css $(LESS_OPTIONS) $(file) build/css/$(basename $(file)).min.css; )
 
@@ -152,11 +152,11 @@ less-lint: less
 # target: npm-update         - Update npm development npm packages.
 # target: npm-version        - Display version for each npm package.
 .PHONY: npm-installl npm-update npm-version
-npm-install: 
+npm-install:
 	@$(call HELPTEXT,$@)
 	npm install
 
-npm-update: 
+npm-update:
 	@$(call HELPTEXT,$@)
 	npm update
 
@@ -167,3 +167,5 @@ npm-version:
 	@$(call CHECK_VERSION, $(CSSLINT))
 	@$(call CHECK_VERSION, $(STYLELINT))
 	@$(call CHECK_VERSION, $(LESSC), | cut -d ' ' -f 2)
+
+# target: upgrade-normalize       - Upgrade LESS module - Normalize.

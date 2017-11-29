@@ -1,0 +1,45 @@
+@import "typography-font-families.less";
+@import "typography-sizes.less";
+@import "typography-mixins.less";
+@import "typography-defaults.less";
+
+.wrap-all {
+    .font();
+    .typographyHeadings();
+    .typographyTextElements();
+    .typographyCodeElements();
+    .typographyListElements();
+    .typographyTableElements();
+    .typographyOtherElements();
+    html.vgrid & {
+        background-image: url(../img/grid/horisontal-grid-24.png);
+    }
+}
+.route-typography & {
+    background-image: url(../img/grid/horisontal-grid-24.png);
+}
+nav div ul a{
+    @height: 56px;
+    .calcMargin(@height);
+    padding-top: (@margin / 2) -1px;
+    padding-bottom: (@margin / 2) -1px;
+}
+.flash-wrap {
+    @height: 180px;
+    height: 180px;
+    .calcMargin(@height);
+    padding-top: (@margin / 2) -1px !important;
+    padding-bottom: (@margin / 2) -1px !important;
+
+}
+.outer-wrap-header{
+    padding-bottom: 17px;
+
+}
+.outer-wrap-after-main{
+    @height: 270px;
+    height: 270px;
+    .calcMargin(@height);
+    padding-top: (@margin / 2) -1px !important;
+    padding-bottom: (@margin / 2) -1px !important;
+}
