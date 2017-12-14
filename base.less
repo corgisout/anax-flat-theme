@@ -1,0 +1,39 @@
+
+@import url(modules.less);
+@import url(responsive-menu.less);
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+
+.outer-wrap-header{
+    border-radius: 20px 20px 20px 20px;
+    height: 150px;
+}
+.navbar2{
+    text-align: center;
+    & ul{
+        display: inline-block;
+    }
+}
+.site-header{
+    padding-top: 30px;
+}
+@media screen and (max-width: 1700px) {
+    .logo-1{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1215px) {
+    .navbar2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .after-main {
+        display: none;
+    }
+}
+.flash-wrap img{
+    max-width: 100%;
+}

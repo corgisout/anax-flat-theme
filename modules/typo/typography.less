@@ -3,7 +3,7 @@
 @import "typography-mixins.less";
 @import "typography-defaults.less";
 
-.wrap-all {
+.main {
     .font();
     .typographyHeadings();
     .typographyTextElements();
@@ -11,7 +11,7 @@
     .typographyListElements();
     .typographyTableElements();
     .typographyOtherElements();
-    html.vgrid & {
+    html.hgrid & {
         background-image: url(../img/grid/horisontal-grid-24.png);
     }
 }
@@ -33,9 +33,10 @@ nav div ul a{
 
 }
 .outer-wrap-header{
-    padding-bottom: 17px;
+    margin-bottom: 17px;
 
 }
+
 .outer-wrap-after-main{
     @height: 270px;
     height: 270px;

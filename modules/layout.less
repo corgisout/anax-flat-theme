@@ -9,7 +9,7 @@
     .route-grid & {
         .showGrid(@gridWidth, @gridImage);
     }
-    html.hgrid & {
+    html.vgrid & {
         .showGrid(@gridWidth, @gridImage);
     }
 }
@@ -27,14 +27,14 @@
 .logo-1{
     position: absolute;
     left:100px;
-    top:100px;
+    top:10px;
 }
 
 .site-logo-text {
     .column(6);
 }
-.navbar2{
-    .column(18)
+.navbar2 {
+    .column(12);
 }
 
 .footer-column{
@@ -76,4 +76,24 @@
 
 .sidebar-right {
     .push(1);
+}
+@media screen and (max-width: 1700px) {
+    .logo-1{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .navbar2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .after-main {
+        display: none;
+    }
+    .has-sidebar{
+        display: none;
+    }
 }

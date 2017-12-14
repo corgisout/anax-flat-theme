@@ -1,0 +1,62 @@
+
+@import url(light.less);
+
+
+// 5A646B
+
+@colorHtml: #090210;
+@textColor: #DEC1FC;
+@navColor: #11000E;
+@accentColor: #11000E;
+@footerColor: #320F2B;
+@navLinkColor: #461E3E;
+@headerColor: #320F2B;
+
+html {
+    background-color: @colorHtml;
+    color: @textColor;
+}
+
+a {
+    color: @accentColor;
+}
+
+.navbar2 {
+    background-color: @navColor;
+    & li {
+    color: @navLinkColor;
+    }
+}
+
+.outer-wrap-footer{
+    background-color: @footerColor;
+    & a{
+        color: @textColor;
+    }
+}
+.outer-wrap-header{
+    background-color: @headerColor;
+}
+.rm-default{
+    background-color: @accentColor;
+    color: @textColor;
+    & li a{
+        background-color: @navLinkColor;
+        color: @textColor;
+    }
+}
+.site-logo-text a{
+    color: @textColor;
+}
+
+.sidebar-left ul.toc {
+    display: block;
+
+    & li {
+        background-color: @accentColor;
+
+        & a {
+            color:@textColor;
+        }
+    }
+}
