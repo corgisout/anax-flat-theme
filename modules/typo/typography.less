@@ -12,11 +12,11 @@
     .typographyTableElements();
     .typographyOtherElements();
     html.hgrid & {
-        background-image: url(../img/grid/horisontal-grid-24.png);
+        background-image: url(../img/grid/horisontal-grid-24.png) !important;
     }
 }
 .route-typography & {
-    background-image: url(../img/grid/horisontal-grid-24.png);
+    background-image: url(../img/grid/horisontal-grid-24.png) !important;
 }
 nav div ul a{
     @height: 56px;
@@ -30,6 +30,7 @@ nav div ul a{
     .calcMargin(@height);
     padding-top: (@margin / 2) -1px !important;
     padding-bottom: (@margin / 2) -1px !important;
+    margin-top: 30px;
 
 }
 .outer-wrap-header{
@@ -43,4 +44,13 @@ nav div ul a{
     .calcMargin(@height);
     padding-top: (@margin / 2) -1px !important;
     padding-bottom: (@margin / 2) -1px !important;
+}
+.site-logo-text{
+    margin-top: 25px;
+}
+.footer{
+    margin-top: -25px;
+}
+.outer-wrap-main{
+    margin-top:-4px;
 }
