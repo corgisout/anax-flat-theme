@@ -1,0 +1,74 @@
+@import url(base.less);
+.wrap-all{
+        background: linear-gradient(to bottom, rgba(255,0,0,0), rgba(255,170,200,1));
+}
+
+
+
+
+.site-logo-text a,
+.outer-wrap-footer,
+.inner-wrap-main,
+.breadcrumb li a,
+.after-main {
+    color: #000000;
+}
+
+.inner-wrap-main {
+    padding: 15px;
+    margin-bottom: 40px;
+    border-style: solid;
+    border-color: #000000;
+    background: linear-gradient(to top, rgba(255,0,0,0), rgba(255,170,200,1));
+}
+.outer-wrap-main::before{
+    background-image: url("../img/design/icecream.png");
+    content: "";
+    position: absolute;
+    top: 300px;
+    left: 0;
+    width: 300px;
+    height: 600px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.outer-wrap-footer::before {
+    background-image: url("../img/design/rabbit.png");
+    content: "";
+    position: absolute;
+    top: 600px;
+    right: 0;
+    width: 200px;
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.outer-wrap-flash{
+    display: none;
+}
+.rm-desktop li a{
+    color: #000000;
+}
+.navbar2{
+    padding: 10px;
+    border-style: solid;
+    background: linear-gradient(to top, rgba(255,0,0,0), rgba(255,170,200,1));
+}
+.site-logo-text{
+    color: #000000
+}
+
+.footer-column{
+    border-style: solid;
+    border-color: #000000;
+    background: linear-gradient(to top, rgba(255,0,0,0), rgba(255,170,200,1));
+    .column(7);
+}
+
+.site-logo-text {
+    .column(4);
+}
